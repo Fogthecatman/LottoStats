@@ -1,1 +1,1 @@
-"# LottoStats" 
+# LottoStats
