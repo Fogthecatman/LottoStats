@@ -1,33 +1,45 @@
-var powerBallURL = 'http://data.ny.gov/resource/d6yy-54nr.json';
-var latest = {
-	"draw_date": "",
-	"winning_numbers": [],
-	"multiplier": ""
-};
-
 $('document').ready(function() {
 
-	$.getJSON(powerBallURL, function(data){
-		latest.draw_date = data[0].draw_date.substring(0, 10);
-		latest.winning_numbers = data[0].winning_numbers.split(" ");
-		latest.multiplier = data[0].multiplier;
-		console.log(latest);
-		setContent();
-	});
+	//Powerball API url
+	var url_powerball = 'http://data.ny.gov/resource/d6yy-54nr.json';
+
+	//Holds data retrieved from api
+	var dataAPI = getData(url_powerball);
+	var latest = setLatest(dataAPI);
+	console.log(latest);
+
+	$('#winning_numbers h5').text(latest.winning_numbers.join(" ") +" "+ latest.last_number);
+	$('#multiplier h5').text(latest.multiplier);
+	$('#draw_date h5').text(latest.draw_year + " " + latest.draw_month + " " + latest.draw_day);
+
 });
 
-function setContent() {
-	var draw_date_html = "<h5>" + latest.draw_date + "</h5>";
-	var winning_numbers_html = "<h5> ";
-  //console.log(latest.draw_date);
-	latest.winning_numbers.forEach(function(number){
-		winning_numbers_html += number + " ";
+function getData(url){
+	var jsonData;
+	$.ajax({
+		url: url,
+		type: "GET",
+		dataType: "json",
+		async: false,
+		success: function(data){
+			jsonData = data;
+		}
 	});
-	winning_numbers_html += "</h5>";
+	return jsonData;
+};
 
-	var multiplier_html = "<h5> " + latest.multiplier + "</h5>";
-	console.log(draw_date_html);
-	$('#draw_date').html(draw_date_html);
-	$('#winning_numbers').html(winning_numbers_html);
-	$('#multiplier').html(multiplier_html);
+function setLatest(data){
+	var date = data[0].draw_date;
+	date = date.split("-");
+	var year = date[0];
+	var month = date[1];
+	var day = (date[2].split("T"))[0];
+	return {
+		"draw_year": year,
+		"draw_month": month,
+		"draw_day": day,
+		"winning_numbers": data[0].winning_numbers.split(" ").splice(0, 5),
+		"last_number": data[0].winning_numbers.split(" ").splice(5, 1).join(""),
+		"multiplier": data[0].multiplier
+	}
 }
