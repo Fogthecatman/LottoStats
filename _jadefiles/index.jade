@@ -27,16 +27,23 @@ html
 
 	body
 		.container
-			.header.s12.m12.l12
-				.header__inner
-					
-					
-			.weeklynums
+			.row
+				#header.col.s12.m12.l12
+					.header__inner
+			.row
+				#weeklynums.col.s12.m12.l12
 					.weeklynums__inner
-						h5 Weekly Powerball
-						.weeklynums__inner-nums
-							#winning_numbers
-							#multiplier
-							#draw_date
+						h5 Recent Powerball Picks
+			.row
+				#winning_numbers-outer.col.s9.m6.l6
+					#winning_numbers
+				#multiplier_outer.col.s3.m3.l1
+					#multiplier
+				#draw_date-outer.col.s3.m6.l5
+					#draw_date
+							
+			#drawingnums
+				.drawingnums__inner
 					
+				
 			

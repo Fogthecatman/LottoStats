@@ -1,35 +1,37 @@
 /* Primary Website Colors */
-.header {
-  height: 200px;
-  width: 100%; }
-  .header .header__inner {
+.row {
+  margin-bottom: 0; }
+  .row .col {
+    margin: 0;
+    padding: 0; }
+
+#header {
+  height: 200px; }
+  #header .header__inner {
     margin: 0 auto;
     height: 100%;
-    max-width: 960px;
     background-color: #70c170; }
 
-.weeklynums {
-  height: 50px;
-  width: 100%; }
-  .weeklynums .weeklynums__inner {
+#weeklynums {
+  height: 50px; }
+  #weeklynums .weeklynums__inner {
     margin: 0 auto;
+    margin-top: 10px;
     height: 100%;
-    max-width: 960px;
     background-color: #4db14d; }
-    .weeklynums .weeklynums__inner h5 {
+    #weeklynums .weeklynums__inner h5 {
       margin: 0;
       padding: 0;
-      padding: 12px;
-      color: #f2f4f2;
-      float: left; }
-    .weeklynums .weeklynums__inner .weeklynums__inner-nums {
-      float: right;
-      height: 100%;
-      width: 600px;
+      padding: 5px;
       color: #f2f4f2; }
-      .weeklynums .weeklynums__inner .weeklynums__inner-nums h5 {
-        float: left;
-        margin: 0;
-        padding: 0; }
-      .weeklynums .weeklynums__inner .weeklynums__inner-nums #multiplier {
-        color: blue; }
+
+#winning_numbers-outer, #multiplier_outer, #draw_date-outer {
+  height: 40px; }
+  #winning_numbers-outer #winning_numbers, #winning_numbers-outer #multiplier, #winning_numbers-outer #draw_date, #multiplier_outer #winning_numbers, #multiplier_outer #multiplier, #multiplier_outer #draw_date, #draw_date-outer #winning_numbers, #draw_date-outer #multiplier, #draw_date-outer #draw_date {
+    height: 100%;
+    background-color: #70c170; }
+  #winning_numbers-outer h5, #multiplier_outer h5, #draw_date-outer h5 {
+    padding: 0;
+    margin: 0;
+    padding: 5px;
+    color: #f2f4f2; }

@@ -3,49 +3,52 @@
 $primary-green: #70c170;
 $green-darken-1: darken($primary-green, 10%);
 $primary-white: #f2f4f2;
-
-.header {
+.row {
+	.col {
+		margin: 0;
+		padding: 0;
+	}
+	margin-bottom: 0;
+}
+#header {
 	height: 200px;
-	width: 100%;
 
 	.header__inner {
 		margin: 0 auto;
 		height: 100%;
-		max-width: 960px;
 		background-color: $primary-green;
 	}
 }
-.weeklynums {
+#weeklynums {
   height: 50px;
-	width: 100%;
-
 	.weeklynums__inner {
 		margin: 0 auto;
+		margin-top: 10px;
 		height: 100%;
-		max-width: 960px;
 		background-color: $green-darken-1;
-
 		h5 {
 			margin: 0;
 			padding: 0;
-			padding: 12px;
+			padding: 5px;
 			color: $primary-white;
-			float: left;
-		}
-
-		.weeklynums__inner-nums {
-			float: right;
-			height: 100%;
-			width: 600px;
-			color: $primary-white;
-			h5 {
-				float: left;
-				margin: 0;
-				padding: 0;
-			}
-			#multiplier {
-				color: blue;
-			}
 		}
 	}
+}
+
+#winning_numbers-outer, #multiplier_outer, #draw_date-outer {
+	height: 40px;
+	#winning_numbers, #multiplier, #draw_date {
+		height: 100%;
+		background-color: $primary-green;
+	}
+	h5 {
+		padding: 0;
+		margin: 0;
+		padding: 5px;
+		color: $primary-white;
+	}
+}
+
+#drawingnums {
+
 }
