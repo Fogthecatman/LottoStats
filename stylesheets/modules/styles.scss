@@ -3,6 +3,46 @@
 $primary-green: #70c170;
 $green-darken-1: darken($primary-green, 10%);
 $primary-white: #f2f4f2;
+$blue-gray: #4a4b56;
+
+/*Changing Materialize Colors*/
+.tabs .tab a {
+	color: $primary-green;
+}
+.tabs .indicator {
+	background-color: $green-darken-1;
+}
+.tabs {
+
+}
+
+
+body {
+	margin: 0;
+	padding: 0;
+}
+#nav {
+	height: 100%;
+	width: 75px;
+	background-color: $blue-gray;
+	position: fixed;
+	top: 0;
+	ul {
+		li {
+			i {
+				color: $primary-white;
+				margin-left: 7px;
+			}
+		}
+	}
+}
+
+#page_content{
+	margin-left: 90px;
+	position: relative;
+}
+
+
 .row {
 	.col {
 		margin: 0;

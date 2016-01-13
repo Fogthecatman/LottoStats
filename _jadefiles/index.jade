@@ -26,26 +26,65 @@ html
 		script(src="/js/main.js", charset="utf-8")
 
 	body
-		.container
-			.row
-				#header.col.s12.m12.l12
-					.header__inner
-			.row
-				#weeklynums.col.s12.m12.l12
-					.weeklynums__inner
-						h5 Recent Powerball Picks
-			.row
-				#winning_numbers-outer.col.s9.m6.l6
-					#winning_numbers
-						h5 00 00 00 00 00 00
-				#multiplier_outer.col.s3.m3.l1
-					#multiplier
-						h5 00
-				#draw_date-outer.col.s3.m3.l5
-					#draw_date
-						h5 0000-00-00	
-			#drawingnums
-				.drawingnums__inner
-					
+		#nav
+			ul
+				li
+					i.medium.material-icons insert_chart
+				li
+					i.medium.material-icons search
+				li
+					i.medium.material-icons trending_up	
+				li
+					i.medium.material-icons schedule
+		
+		#page_content
+			#winning_numbers
+				h5 00 00 00 00 00 00
+			#multiplier
+				h5 00
+			#draw_date
+				h5 0000-00-00	
+				
+			#page__content-tabs
+				.row
+					.col.s12
+						ul.tabs
+							li.tab.col.s1
+								a(href="#January") JAN
+							li.tab.col.s1
+								a(href="#February") FEB	
+							li.tab.col.s1
+								a(href="#March") MAR
+							li.tab.col.s1
+								a(href="#April") APR
+							li.tab.col.s1
+								a(href="#May") MAY
+							li.tab.col.s1
+								a(href="#June") JUNE	
+							li.tab.col.s1
+								a(href="#July") JULY
+							li.tab.col.s1
+								a(href="#August") AUG
+							li.tab.col.s1
+								a(href="#September") SEP
+							li.tab.col.s1
+								a(href="#October") OCT	
+							li.tab.col.s1
+								a(href="#November") NOV
+							li.tab.col.s1
+								a(href="#December") DEC
+												
+					#January.col.s12 January Lottery Winnings
+					#February.col.s12 February Lottery Winnings	
+					#March.col.s12 March Lottery Winnings	
+					#April.col.s12 April Lottery Winnings	
+					#May.col.s12 May Lottery Winnings	
+					#June.col.s12 June Lottery Winnings	
+					#July.col.s12 July Lottery Winnings	
+					#August.col.s12 August Lottery Winnings	
+					#September.col.s12 September Lottery Winnings	
+					#October.col.s12 October Lottery Winnings	
+					#November.col.s12 November Lottery Winnings	
+					#December.col.s12 December Lottery Winnings				
 				
 			

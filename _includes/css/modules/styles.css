@@ -1,4 +1,29 @@
 /* Primary Website Colors */
+/*Changing Materialize Colors*/
+.tabs .tab a {
+  color: #70c170; }
+
+.tabs .indicator {
+  background-color: #4db14d; }
+
+body {
+  margin: 0;
+  padding: 0; }
+
+#nav {
+  height: 100%;
+  width: 75px;
+  background-color: #4a4b56;
+  position: fixed;
+  top: 0; }
+  #nav ul li i {
+    color: #f2f4f2;
+    margin-left: 7px; }
+
+#page_content {
+  margin-left: 90px;
+  position: relative; }
+
 .row {
   margin-bottom: 0; }
   .row .col {
