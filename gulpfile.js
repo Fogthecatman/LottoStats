@@ -12,7 +12,7 @@ gulp.task('jade', function(){
 		console.log(err);
 		this.emit('end');
 	})
-	.pipe(gulp.dest('_includes/pages'));
+	.pipe(gulp.dest('_includes/'));
 });
 
 /* SASS Tasks */
