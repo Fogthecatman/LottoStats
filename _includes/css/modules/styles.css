@@ -1,6 +1,35 @@
-h1 {
-  color: green;
-  font-size: 16px; }
+/* Primary Website Colors */
+.header {
+  height: 200px;
+  width: 100%; }
+  .header .header__inner {
+    margin: 0 auto;
+    height: 100%;
+    max-width: 960px;
+    background-color: #70c170; }
 
-h2 {
-  color: red; }
+.weeklynums {
+  height: 50px;
+  width: 100%; }
+  .weeklynums .weeklynums__inner {
+    margin: 0 auto;
+    height: 100%;
+    max-width: 960px;
+    background-color: #4db14d; }
+    .weeklynums .weeklynums__inner h5 {
+      margin: 0;
+      padding: 0;
+      padding: 12px;
+      color: #f2f4f2;
+      float: left; }
+    .weeklynums .weeklynums__inner .weeklynums__inner-nums {
+      float: right;
+      height: 100%;
+      width: 600px;
+      color: #f2f4f2; }
+      .weeklynums .weeklynums__inner .weeklynums__inner-nums h5 {
+        float: left;
+        margin: 0;
+        padding: 0; }
+      .weeklynums .weeklynums__inner .weeklynums__inner-nums #multiplier {
+        color: blue; }

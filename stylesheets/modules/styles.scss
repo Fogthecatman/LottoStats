@@ -1,7 +1,51 @@
-h1 {
-  color: green;
-  font-size: 16px;
+/* Primary Website Colors */
+
+$primary-green: #70c170;
+$green-darken-1: darken($primary-green, 10%);
+$primary-white: #f2f4f2;
+
+.header {
+	height: 200px;
+	width: 100%;
+
+	.header__inner {
+		margin: 0 auto;
+		height: 100%;
+		max-width: 960px;
+		background-color: $primary-green;
+	}
 }
-h2 {
-  color: red;
+.weeklynums {
+  height: 50px;
+	width: 100%;
+
+	.weeklynums__inner {
+		margin: 0 auto;
+		height: 100%;
+		max-width: 960px;
+		background-color: $green-darken-1;
+
+		h5 {
+			margin: 0;
+			padding: 0;
+			padding: 12px;
+			color: $primary-white;
+			float: left;
+		}
+
+		.weeklynums__inner-nums {
+			float: right;
+			height: 100%;
+			width: 600px;
+			color: $primary-white;
+			h5 {
+				float: left;
+				margin: 0;
+				padding: 0;
+			}
+			#multiplier {
+				color: blue;
+			}
+		}
+	}
 }
