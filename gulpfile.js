@@ -18,9 +18,9 @@ gulp.task('jade', function(){
 /* SASS Tasks */
 /* This task will seek all scss files ancompile them */
 gulp.task('sass', function(){
-   return gulp.src('stylesheets/_main.scss')                                // find source folder
-          .pipe(sass.sync().on('error', sass.logError))
-          .pipe(gulp.dest('_includes/css/styles.css'));                       //find destination folder
+   return gulp.src('stylesheets/**/*.scss')
+          .pipe(sass().on('error', sass.logError))
+          .pipe(gulp.dest('_includes/css'));
 });
 
 /*BR/**/
@@ -37,9 +37,13 @@ gulp.task('css-reload', function () {
 	.pipe(browserSync.stream({match: '**/*.css'}));
 });
 
+gulp.task("sass:watch", function(){
+		gulp.watch('./stylesheets/**/*.scss', ['sass']);
+});
+
 gulp.task('watch', function () {
     gulp.watch('_jadefiles/**/*.jade', ['jade', 'jade-reload']);
-		gulp.watch('_includes/css/styles.css', ['css-reload']);
+		gulp.watch('stylesheets/**/*.scss', ['sass', 'css-reload']);
 });
 
 gulp.task('default', ['watch', 'jade', 'browser-sync', 'sass']);
